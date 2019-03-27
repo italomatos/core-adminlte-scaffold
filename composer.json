@@ -1,6 +1,6 @@
 {
     "name": "italomatos/core-adminlte-scaffold",
-    "description": "A short description of what your package does",
+    "description": "CRUD generator to Laravel's  project with AdminLTE template",
     "require": {
         "php": "^7.2"
     },

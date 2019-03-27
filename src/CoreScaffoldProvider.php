@@ -30,7 +30,7 @@ class CoreScaffoldProvider extends ServiceProvider
         |--------------------------------------------------------------------------
         */
         $this->commands([
-            Coredigital\Scaffold\Console\ScaffoldGenerator::class
+            \Coredigital\Scaffold\Console\ScaffoldGenerator::class
         ]);
     }
 }

@@ -1,10 +1,12 @@
 <?php
 namespace Coredigital\Scaffold;
+
 use Illuminate\Support\ServiceProvider;
+
 class CoreScaffoldProvider extends ServiceProvider
 {
     /**
-     * Boot method.
+     * Boot method. teste
      *
      * @return void
      */

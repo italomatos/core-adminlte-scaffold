@@ -13,7 +13,6 @@ class CoreScaffoldProvider extends ServiceProvider
      */
     public function boot()
     {
-        echo "teste";
         $this->publishes([
             __DIR__.'/Templates/stubs' => resource_path('stubs')
         ]);

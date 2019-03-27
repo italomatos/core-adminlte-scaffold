@@ -1,6 +1,11 @@
 {
     "name": "italomatos/core-adminlte-scaffold",
     "description": "CRUD generator to Laravel's  project with AdminLTE template",
+    "autoload": {
+        "psr-4": {
+            "Coredigital\\Scaffold\\": "src/"
+        }
+    },
     "extra": {
 	    "laravel": {
 	        "providers": [
@@ -8,9 +13,5 @@
 	        ]
 	    }
 	},
-	"autoload": {
-        "psr-4": {
-            "Coredigital\\Scaffold\\": "src/"
-        }
-    }
+	
 }

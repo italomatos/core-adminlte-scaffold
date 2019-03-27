@@ -1,6 +1,6 @@
 <?php
 
-namespace Core\Scaffold\Console;
+namespace Coredigital\Scaffold\Console;
 
 use Illuminate\Console\Command;
 use Artisan;

@@ -2,7 +2,7 @@
     "name": "italomatos/core-adminlte-scaffold",
     "description": "CRUD generator to Laravel's  project with AdminLTE template",
     "require": {
-        "php": "^7.2"
+        /* "php": "^7.2" */
     },
     "extra": {
 	    "laravel": {

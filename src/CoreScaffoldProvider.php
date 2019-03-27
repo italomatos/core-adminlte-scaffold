@@ -1,7 +1,6 @@
 
 <?php
 namespace Coredigital\Scaffold;
-use Grafite\FormMaker\FormMakerProvider;
 use Illuminate\Support\ServiceProvider;
 class CoreScaffoldProvider extends ServiceProvider
 {
@@ -23,14 +22,6 @@ class CoreScaffoldProvider extends ServiceProvider
      */
     public function register()
     {
-        /*
-        |--------------------------------------------------------------------------
-        | Providers
-        |--------------------------------------------------------------------------
-        */
-        if (class_exists('Illuminate\Foundation\AliasLoader')) {
-            $this->app->register(FormMakerProvider::class);
-        }
         /*
         |--------------------------------------------------------------------------
         | Register the Commands

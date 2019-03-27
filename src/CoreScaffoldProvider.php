@@ -13,7 +13,7 @@ class CoreScaffoldProvider extends ServiceProvider
      */
     public function boot()
     {
-        echo "teste";
+        $this->loadViewsFrom(__DIR__.'/views', 'timezones');
         $this->publishes([
             __DIR__.'/Templates/stubs' => resource_path('stubs')
         ]);

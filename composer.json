@@ -7,5 +7,10 @@
 	            "Coredigital\\Scaffold\\CoreScaffoldProvider"
 	        ]
 	    }
-	}
+	},
+	"autoload": {
+        "psr-4": {
+            "Coredigital\\Scaffold\\": "src/"
+        }
+    },
 }

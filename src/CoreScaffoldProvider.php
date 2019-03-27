@@ -1,4 +1,5 @@
 <?php
+
 namespace Coredigital\Scaffold;
 
 use Illuminate\Support\ServiceProvider;

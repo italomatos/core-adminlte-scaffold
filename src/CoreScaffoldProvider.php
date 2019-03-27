@@ -1,4 +1,3 @@
-
 <?php
 namespace Coredigital\Scaffold;
 use Illuminate\Support\ServiceProvider;
@@ -28,7 +27,7 @@ class CoreScaffoldProvider extends ServiceProvider
         |--------------------------------------------------------------------------
         */
         $this->commands([
-            Core\Scaffold\Console\ScaffoldGenerator::class
+            Coredigital\Scaffold\Console\ScaffoldGenerator::class
         ]);
     }
 }

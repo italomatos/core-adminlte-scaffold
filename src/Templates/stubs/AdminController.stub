@@ -23,15 +23,16 @@
 
         public function store(Request $request)
         {
-
-            $validatedData = $request->validate([
-            ]);
-            //${{modelNameSingularLowerCase}} = {{modelName}}::create($validatedData);
-
-            {{settingColumns}};
-
-            ${{modelNameSingularLowerCase}}->save();
-            return redirect('/admin/{{modelNamePluralLowerCase}}')->with('success', '{{modelName}} cadastrado com sucesso.');
+	    //TO VALIDATION FORM		
+            //$validatedData = $request->validate([
+            //]);            
+	    try {
+	    ${{modelNameSingularLowerCase}} = {{modelName}}::create($validatedData);
+	    return redirect('/admin/{{modelNamePluralLowerCase}}')->with('success', '{{modelName}} cadastrado com sucesso.');
+	    } catch (\Throwable $th) {
+	    return redirect('/admin/{{modelNamePluralLowerCase}}')->with('error', 'Ocorreu um erro inesperado, tente novamente.');
+	    }
+            
         }
 
         public function edit({{modelName}} ${{modelNameSingularLowerCase}})
@@ -50,16 +51,20 @@
 
         public function update(Request $request, {{modelName}} ${{modelNameSingularLowerCase}})
         {
-            $request->validate([
-            ]);
+             //to validation
+	     //$request->validate([
+             //]);
 
             ${{modelNameSingularLowerCase}} = {{modelName}}::find(${{modelNameSingularLowerCase}}->id);
-           
-            {{editSettingColumns}};
-
-            ${{modelNameSingularLowerCase}}->save();
-
-            return redirect('/admin/{{modelNamePluralLowerCase}}')->with('success', '{{modelName}} atualizado!');
+           $input = $request->all();
+	   $input = $request->except('_method' , '_token');
+            try {
+                {{modelName}}::where('', ${{modelNameSingularLowerCase}}->id)->update($input);  
+                return redirect('/admin/tickets')->with('success', '{{modelName}} atualizado!');  
+            } catch (\Throwable $th) {
+                return redirect('/admin/tickets')->with('error', 'Ocorreu um erro inexperado.');  
+            }
+            
         }
 
         public function destroy({{modelName}} ${{modelNameSingularLowerCase}})
